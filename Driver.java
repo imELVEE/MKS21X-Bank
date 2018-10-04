@@ -10,21 +10,21 @@ public class Driver{
 
                 System.out.println(test);
 
-                if (test.deposit(5)) {
+                if (test.deposit(5.0)) {
                         System.out.println("Desposited successfully");
                 }
                 else {
                         System.out.println("Failure");
                 }
 
-		if (test.deposit(-5)) {
+		if (test.deposit(-5.0)) {
                         System.out.println("Desposited successfully");
                 }
                 else {
                         System.out.println("Failure");
                 }
 
-		if (test.withdraw(5)) {
+		if (test.withdraw(5.0)) {
                         System.out.println("Withdrawn successfully");
                 }
                 else {
@@ -32,7 +32,7 @@ public class Driver{
                 }
 
 
-		if (test.withdraw(9000)) {
+		if (test.withdraw(9000.0)) {
                         System.out.println("Withdrawn successfully");
                 }
                 else {
