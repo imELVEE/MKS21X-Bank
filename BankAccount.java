@@ -13,7 +13,7 @@ public class BankAccount{
 		return balance;
 	}
 
-	public int accountID() {
+	public int getAccountID() {
 		return accountID;
 	}
 
