@@ -47,6 +47,11 @@ public class BankAccount{
 
 	public boolean transferTo(BankAccount other, double amount, String password) {
 		if (authenticate(password)) {
-			if withdraw
+			if (withdraw(amount)) {
+				other.deposit(amount);
+			}
+		}
+		return authenticate(password);
+	}
 
 }

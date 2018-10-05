@@ -33,5 +33,26 @@ public class DriverBankAccount{
       System.out.println();
       cashAmount *= 2;
     }
+
+    b2.transferTo(b1, 100, "abcasdg23");
+    System.out.println("Account b1:");
+    System.out.println(b1);
+    System.out.println("Account b2:");
+    System.out.println(b2);
+    System.out.println();
+
+    b2.transferTo(b1, -100, "abcasdg23");
+    System.out.println("Account b1:");
+    System.out.println(b1);
+    System.out.println("Account b2:");
+    System.out.println(b2);
+    System.out.println();
+
+    b2.transferTo(b1, 100, "abs123");
+    System.out.println("Account b1:");
+    System.out.println(b1);
+    System.out.println("Account b2:");
+    System.out.println(b2);
+    System.out.println();
   }
 }
