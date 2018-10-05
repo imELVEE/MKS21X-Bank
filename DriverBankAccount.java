@@ -33,26 +33,47 @@ public class DriverBankAccount{
       System.out.println();
       cashAmount *= 2;
     }
+    
 
-    b2.transferTo(b1, 100, "abcasdg23");
-    System.out.println("Account b1:");
-    System.out.println(b1);
-    System.out.println("Account b2:");
-    System.out.println(b2);
-    System.out.println();
+    double cash = 100.0;
+    String pass = "abcasdg23";
+    for (int i = 0; i < 3; i++) {
+     if (pass.equals("abcasdg23")) {
 
-    b2.transferTo(b1, -100, "abcasdg23");
-    System.out.println("Account b1:");
-    System.out.println(b1);
-    System.out.println("Account b2:");
-    System.out.println(b2);
-    System.out.println();
+	if (cash > 0) {
 
-    b2.transferTo(b1, 100, "abs123");
-    System.out.println("Account b1:");
-    System.out.println(b1);
-    System.out.println("Account b2:");
-    System.out.println(b2);
-    System.out.println();
+		if (b2.getBalance() > cash) {
+     			b2.transferTo(b1, cash, pass);
+			System.out.println("SUCCESS: tranferred " + cash);
+		}
+		else {
+			System.out.println("cannot transfer more money than in account: tried to transfer " + cash);
+		}
+
+     	}
+	else {
+		System.out.println("cannot deposit transfer negative amount: tried to transfer " + cash);
+	}
+	
+	
+     }
+     else {
+        System.out.println("Transfer failed, password incorrect");
+     }
+
+     System.out.println("Account b1:");
+     System.out.println(b1);
+     System.out.println("Account b2:");
+     System.out.println(b2);
+     System.out.println();
+	
+     cash -= 200.0;
+     if (i == 1) {
+	pass = "wrongpass";
+     }
+    
+    }
+
+
   }
 }
